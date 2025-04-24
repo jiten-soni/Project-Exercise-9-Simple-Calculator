@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.site-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+
+.calculator {
+    background-color: #f5f5fa;
+    color: black;
+}
+
+.calculator.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.calculator.dark-mode .display-area {
+    background-color: #333;
+    color: white;
+}
+
+.calculator.dark-mode .btn {
+    background-color: #444;
+    color: white;
+}
+
+.calculator.dark-mode .btn[data-key="="],
+.calculator.dark-mode .btn[data-key="delete"] {
+    background-color: grey;
+    color: black;
+}
+
+.calculator.dark-mode .camera {
+    background-color: gray;
+}
+
+
+
+.calculator {
+    width: 100%;
+    max-width: 300px;
+    background-color: #f5f5fa;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50px;
+    padding: 30px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.header .camera {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.header #darkModeToggle{
+    font-size: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.display-area {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.132) inset;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    background-color: #f7f7f7;
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    padding: 1rem;
+    letter-spacing: 1.5px;
+    resize: none;
+}
+
+.btns-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.btns-container .btn {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 2px 2px;
+    border-radius: 5px;
+}
+
+.btns-container .btn[data-key="="] {
+    height: initial;
+    grid-row: 4/-1;
+    grid-column: 4/-1;
+    background-color: black;
+    color: white;
+}
+
+.btns-container .btn[data-key="clear"] {
+    background-color: red;
+    color: white;
+}
+
+.btns-container .btn[data-key="delete"] {
+    background-color: black;
+    color: white;
+}
